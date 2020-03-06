@@ -25,22 +25,22 @@ public class ProductController {
     }
 
     @GetMapping(path = "/{id}")
-    public Product getAllProductById(@PathVariable String id) {
+    public Product productById(@PathVariable String id) {
         return productService.findById(id);
     }
 
     @PostMapping(path = "/add")
-    public void addProduct(@RequestBody Product product) {
+    public void add(@RequestBody Product product) {
         productService.addProduct(product);
     }
 
     @PostMapping(path = "/update")
-    public void updateProduct(@RequestBody Product product) {
+    public void update(@RequestBody Product product) {
         productService.updateProduct(product);
     }
 
     @PostMapping(path = "/delete")
-    public void updateProduct(@RequestBody String productId) {
+    public void delete(@RequestBody String productId) {
         productService.deleteProduct(productId);
     }
 
