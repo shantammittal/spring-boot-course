@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class ProductService {
@@ -15,7 +16,7 @@ public class ProductService {
     ProductRepository productRepository;
 
     public List<Product> findByName(String productName) {
-        return productRepository.findByProductName(productName);
+        return productRepository.findByName(productName);
     }
 
     public Product findById(String id) {
@@ -23,7 +24,7 @@ public class ProductService {
     }
 
     public void addProduct(Product product) {
-        //product.setProductId(UUID.randomUUID().toString());
+        product.setId(UUID.randomUUID().toString());
         productRepository.save(product);
     }
 

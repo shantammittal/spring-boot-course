@@ -12,5 +12,5 @@ public interface ProductRepository extends JpaRepository<Product, String> {
 
     List<Product> findByPrice(BigDecimal p);
 
-    List<Product> findByProductName(String productName);
+    List<Product> findByName(String productName);
 }

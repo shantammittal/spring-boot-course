@@ -10,10 +10,11 @@ import java.math.BigDecimal;
 @Entity
 public class Product {
     @Id
-    String productId;
-    String productName;
+    String id;
+    String name;
+    String description;
+    String img;
     BigDecimal price;
-    BigDecimal stock;
-
-
+    BigDecimal quantity;
+    Boolean wishlisted;
 }
