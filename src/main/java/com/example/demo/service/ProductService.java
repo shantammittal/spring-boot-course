@@ -13,10 +13,10 @@ import java.util.UUID;
 public class ProductService {
 
     @Autowired
-    ProductRepository productRepository;
+    private ProductRepository productRepository;
 
-    public List<Product> findByName(String productName) {
-        return productRepository.findByName(productName);
+    public List<Product> findByType(String productType) {
+        return productRepository.findByType(productType);
     }
 
     public Product findById(String id) {
@@ -32,8 +32,8 @@ public class ProductService {
         productRepository.save(product);
     }
 
-    public void deleteProduct(List<Product> product) {
-        productRepository.deleteAll(product);
+    public void deleteProduct(String productId) {
+        productRepository.deleteById(productId);
     }
 
     public List<Product> getAllProduct() {

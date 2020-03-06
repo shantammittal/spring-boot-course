@@ -14,6 +14,7 @@ public class Product {
     String name;
     String description;
     String img;
+    String type;
     BigDecimal price;
     BigDecimal quantity;
     Boolean wishlisted;
