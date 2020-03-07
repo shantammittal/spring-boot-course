@@ -28,6 +28,11 @@ public class ProductServiceImpl implements ProductService {
         productRepository.save(product);
     }
 
+    public List<String> findDistinctType() {
+        return productRepository.findDistinctType();
+    }
+
+
     public void updateProduct(Product product) {
         productRepository.save(product);
     }

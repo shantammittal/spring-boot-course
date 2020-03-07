@@ -17,4 +17,7 @@ public interface ProductService {
     public void deleteProduct(String productId);
 
     public List<Product> getAllProduct();
+
+    public List<String> findDistinctType();
+
 }
