@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/product")
 public class ProductController {
@@ -17,6 +18,10 @@ public class ProductController {
     @GetMapping(path = "/type/{productType}")
     public List<Product> productByType(@PathVariable String productType) {
         return productService.findByType(productType);
+    }
+    @GetMapping(path = "/type")
+    public List<String> productTypes() {
+        return productService.findDistinctType();
     }
 
     @GetMapping
