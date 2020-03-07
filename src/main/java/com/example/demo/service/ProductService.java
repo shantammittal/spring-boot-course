@@ -19,6 +19,10 @@ public class ProductService {
         return productRepository.findByType(productType);
     }
 
+    public List<String> findDistinctType() {
+        return productRepository.findDistinctType();
+    }
+
     public Product findById(String id) {
         return productRepository.findById(id).get();
     }
