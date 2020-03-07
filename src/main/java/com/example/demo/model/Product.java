@@ -11,6 +11,7 @@ import java.math.BigDecimal;
 public class Product {
     @Id
     String id;
+    String userId;
     String name;
     String description;
     String img;
